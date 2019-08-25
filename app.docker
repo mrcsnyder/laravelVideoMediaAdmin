@@ -1,7 +1,7 @@
 FROM php:7-fpm
 
 # mysql
-RUN apt-get update && apt-get install -y mariadb-client \
+RUN apt-get update && apt-get install -y default-mysql-client \
     && docker-php-ext-install pdo_mysql
 
 
