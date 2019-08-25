@@ -1,71 +1,103 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+## Steps to prepare to run this project locally on your computer:
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+1. Download Docker Desktop from Docker Hub.  If you do not have an account at Docker Hub already then create one here:
+	https://hub.docker.com/
 
-## About Laravel
+2. After your account is created and verified (it is likely they will send you an email to verify your account with) then the next step is to log into your account and near the bottom right there is a button that says ‘Download Docker Desktop’.  Please select the appropriate operating system and log into your account.  After it has been installed then search for the program in your applications and start the application up.  It may take a few minutes to get Docker started.  Once it is started you will be able to use Docker on your machine.  Docker is fabulous because it allows you to work on the same project with the use of containers so it ensures that al developers are working with the same settings.  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Get your Computer Ready for Laravel:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Install Composer Globally:
 
-## Learning Laravel
+### Mac:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost you and your team's skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+### Windows:  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+https://getcomposer.org/doc/00-intro.md#installation-windows
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Get the Project Ready on you Local Machine to Build Docker containers:
 
-## Security Vulnerabilities
+1. Clone the laravelVideoMediaAdmin repo from my GitHub account at into your development directory with this command:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+```
+git clone https://github.com/mrcsnyder/laravelVideoMediaAdmin.git
+```
+ 
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. On the Google Drive folder go into the LaravelVideoMediaAdmin-Files subfolder and download the env file (this file has the database credentials necessary for this project to work locally with the Docker containers you are about to build).  Then copy this file and add it to the root level of the laravelVideoMediaAdmin project you cloned to your development folder.  Change the name of this file to ‘.env’.  
+
+
+3. Now it is time to build the Docker containers using Docker compose.  If you have never done this, then do not worry!  This is very easy, but it can take a few minutes depending on how fast your internet connection and computer are!  The files are already ready to go inside of the project so it should build without a problem!
+
+
+## Build the Docker container:
+
+
+
+1. cd into the root level of the laravelVideoMediaAdmin project and run this command: 
+
+```
+docker-compose up -d
+```
+
+
+2. After everything has been built check to ensure that your docker containers are ‘UP’ & running by doing this command in command prompt or terminal:
+docker-compose ps
+
+
+
+3. If all looks like it is running then perform this command (if composer was not installed then please see the “Steps to prepare to run this project locally on your computer” section at the top of this Readme and ensure that Composer is installed):
+```
+composer update
+```
+
+4. Next run the following command to migrate your database files:
+
+```
+php artisan migrate
+```
+
+5. Finally, open a browser and you should be able to access the Video Admin application by visiting:  
+http://localhost:8080/
+
+
+
+## Basic Video Admin Application Usage:
+
+
+Here are some basics about how this application works.  If you wish to have a better demo then please feel free to send me a message or contact me and I will walk you through it!
+
+
+### Add a Video:
+
+1. The first step would be to click the ‘Add Video’ button at the top.  Next you will find a test video (mp4 named ‘test-video.mp4’) that I have added to the /public/videos folder in this project.  Copy that somewhere on your local machine, or navigate there when selecting the file you wish to upload.  Your video should be uploaded to the local storage of the project and then visible from the View Videos button.  
+
+
+### Add a Genre:
+
+2. The next step is to Add a Genre with the ‘’+ Add Genre’ button.  After adding a Genre (e.g. ‘Alternative Rock’) you will be redirected back to the Home page and your Genre should show up.  
+
+
+### Add a playlist to a Genre:
+
+3. Underneath a Genre’s card there is an ‘+ Add Playlist’ button.  Click that and enter in a name for your Playlist.  After clicking the ‘Create Playlist’ button you will be redirected back to the home page and you will see the playlist underneath its Genre.  
+
+
+### Edit Playlist:
+
+4. Next, you edit or add an uploaded video to your playlist by clicking the ‘Edit Playlist’ button underneath of an added Playlist on the home page.  When on the edit page you should see the option to update the title of your playlist and also a dropdown for you to select from uploaded videos which video you want to attach to a playlist.  If you click on the linked title of your playlist you should be able to view a responsive playlist of your video(s).    
+
+
+### View Playlist:
+
+5. On the home page underneath a Genre you will see the linked names of the playlists you added.  To view a responsive video playlist then click the linked name and a new tab will open that allows you to watch all of the videos added to a playlist.
+
+
+Again, if you need help with or understanding any of this then please feel free to reach out to me and I will be happy to help!
