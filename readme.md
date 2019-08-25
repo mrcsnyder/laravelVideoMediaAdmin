@@ -3,7 +3,7 @@
 1. Download Docker Desktop from Docker Hub.  If you do not have an account at Docker Hub already then create one here:
 	https://hub.docker.com/
 
-2. After your account is created and verified (it is likely they will send you an email to verify your account with) then the next step is to log into your account and near the bottom right there is a button that says ‘Download Docker Desktop’.  Please select the appropriate operating system and log into your account.  After it has been installed then search for the program in your applications and start the application up.  It may take a few minutes to get Docker started.  Once it is started you will be able to use Docker on your machine.  Docker is fabulous because it allows you to work on the same project with the use of containers so it ensures that al developers are working with the same settings.  
+2. After your account is created and verified (it is likely they will send you an email to verify your account with) then the next step is to log into your account and near the bottom right there is a button that says ‘Download Docker Desktop’.  Please select the appropriate operating system and log into your account.  After it has been installed then search for the program in your applications and start the application up.  It may take a few minutes to get Docker started.  Once it is started you will be able to use Docker on your machine.  Docker is fabulous because it allows you to work on the same project with the use of containers so it ensures that all developers are working with the same project settings. :)  
 
 
 ## Get your Computer Ready for Laravel:
