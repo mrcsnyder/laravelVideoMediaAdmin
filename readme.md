@@ -72,7 +72,7 @@ http://localhost:8080/
 ## Basic Video Admin Application Usage:
 
 
-Here are some basics about how this application works.  If you wish to have a better demo then please feel free to send me a message or contact me and I will walk you through it!
+Here are some basics about how this application works.  If you wish to have a better demo then please feel free to contact me and I will walk you through it!
 
 
 ### Add a Video:
