@@ -100,4 +100,24 @@ Here are some basics about how this application works.  If you wish to have a be
 5. On the home page underneath a Genre you will see the linked names of the playlists you added.  To view a responsive video playlist then click the linked name and a new tab will open that allows you to watch all of the videos added to a playlist.
 
 
-Again, if you need help with or understanding any of this then please feel free to reach out to me and I will be happy to help!
+## Code review:
+
+### Models:
+
+To view Models for this project please check the app/Models/Video directory
+
+### Views:
+
+To review the View files please check the resources/views/video-admin folder and its subdirectories (media, playlists, video-licenses, and videos).
+
+### Controllers:
+
+To view the Controllers for this project please check the app/Http/Controllers folder to find the VideoLicenses (Genre), VideoPlayistsController, and VideosController.
+
+
+### Form Validation Logic:
+
+Please see the app/Http/Requests folder to view the StoreVideoEditRequest, StoreVideoFilmPlaylistRequest, StoreVideoLicensePlaylistRequest, StoreVideoLicenseRequest, StoreVideoPlaylistRequest, and StoreVideoRequest request files that contain logic to help control these specific types of requests and handle validation when forms are passed these types of Request objects.
+
+
+##** Again, if you need help with or understanding any of this then please feel free to reach out to me and I will be happy to help!
