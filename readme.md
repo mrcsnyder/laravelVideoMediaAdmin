@@ -37,7 +37,7 @@ git clone https://github.com/mrcsnyder/laravelVideoMediaAdmin.git
 3. Now it is time to build the Docker containers using Docker compose.  If you have never done this, then do not worry!  This is very easy, but it can take a few minutes depending on how fast your internet connection and computer are!  The files are already ready to go inside of the project so it should build without a problem!
 
 
-## Build the Docker container:
+## Build the Docker container, update composer, and migrate your database files:
 
 
 
